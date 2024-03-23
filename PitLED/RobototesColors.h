@@ -1,4 +1,5 @@
 #include <FastLED.h>
+#include <FastLED_NeoPixel.h>
 
 #ifndef COLORS_H
 #define COLORS_H

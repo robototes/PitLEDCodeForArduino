@@ -1,8 +1,9 @@
-#include <FastLED.h>
 
 #include "PitLED.h"
 #include "RobototesColors.h"
 
+
+#define MOSI_PIN 3
 
 PitLED::PitLED(int strands, int ledsPerStrand) {
   numStrands = strands;
@@ -12,7 +13,7 @@ PitLED::PitLED(int strands, int ledsPerStrand) {
 
 void PitLED::init() {
   leds = new CRGB[numLEDsPerStrand * numStrands];
-  FastLED.addLeds<NEOPIXEL, 5>(leds, (int) numLEDsPerStrand * numStrands);
+  FastLED.addLeds<NEOPIXEL, MOSI_PIN>(leds, (int) numLEDsPerStrand * numStrands);
   for (int i = 0; i < numLEDsPerStrand * numStrands; i++) {
     leds[i] = CRGB::Black;
   }

@@ -1,4 +1,4 @@
-#include <FastLED.h>
+#include <FastLED_NeoPixel.h>
 
 #ifndef PitLED_H
 #define PitLED_H
