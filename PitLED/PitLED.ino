@@ -3,7 +3,7 @@
 
 #define NUM_LEDS 144
 #define DATA_PIN 3
-#define NUM_STRANDS 6
+#define NUM_STRANDS 9
 
 void (* functions[])(CRGB*, int, int, CRGB, int, int) = {
   &SwirlFunction,
